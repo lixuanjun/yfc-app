@@ -1,0 +1,18 @@
+view.payTypeBox{width:100%;height:100%;position: fixed;left:0;right:0;top:0;bottom:0;z-index: 1000;background: rgba(0, 0, 0, 0.3);}
+view.payType{width: 600rpx;height: 400rpx;background: #fff;position: absolute;left:50%;top:50%;transform: translate(-50%,-50%);-webkit-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);border-radius: 20rpx;font-size:36rpx;color:#fff;/*overflow: hidden;*/}
+view.payType_top{height: 80rpx;background: #78a8ed;display: flex;justify-content: space-between;align-items: center;}
+view.payType_top>text{margin-left: 30rpx;}
+view.payType_top>image{width:46rpx;height:46rpx;margin-right: 30rpx;}
+view.payType_center{height: 100rpx;/*background: orange;*/text-align: center;line-height: 100rpx;font-size:50rpx;color:#f46246;}
+view.payType_bottom{height: 220rpx;/*background: yellow;*/}
+view.payType_bottom>view{height: 110rpx;border-top:1rpx solid #dadadc;box-sizing: border-box;display: flex;align-items: center;}
+view.payType_bottom>view>image{width:100rpx;height:100rpx;margin-left:30rpx; }
+view.payType_bottom>view>view{display: flex;flex-direction: column;margin-left: 40rpx;}
+view.payType_bottom>view>view>text:nth-child(1){color:#444;}
+view.payType_bottom>view>view>text:nth-child(2){font-size:24rpx;color:#999;}
+
+
+
+
+
+

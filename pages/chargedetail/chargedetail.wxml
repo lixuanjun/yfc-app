@@ -1,0 +1,109 @@
+<!-- 动画效果 -->
+<view class='animation'>
+  <image class='bg' src='../../images/chargedetail_img/banner.png'></image>
+  <image class='sun' src='../../images/chargedetail_img/sun.png'></image>
+  <image class='cloud_big' src='../../images/chargedetail_img/cloud.png'></image>
+  <image class='cloud_small' src='../../images/chargedetail_img/cloud.png'></image>
+  <view class='battery_box'></view><!--电池充电效果-->
+  <!-- 电池动画效果缓存,加载前先缓存一下,防止动画效果卡顿start -->
+  <view class='battery_cache0'></view>
+  <view class='battery_cache1'></view>
+  <view class='battery_cache2'></view>
+  <view class='battery_cache3'></view>
+  <view class='battery_cache4'></view>
+  <!-- 电池动画效果缓存,加载前先缓存一下,防止动画效果卡顿end -->
+</view>
+<!-- 充电中 -->
+<view class='main_detail'>
+  <view class='station' wx:for="{{lists}}" wx:key="item.$id">
+    <!-- 左边的信息 -->
+    <view class='infor'>
+      <!-- 地方 -->
+      <view class='place'>
+        <text>{{item.Name}}</text>
+        <view class='place_deviceNumber'>
+          <text>设备编号：</text>
+          <text>{{item.DeviceNumber}}</text>
+        </view>
+      </view>
+      <!-- 位置 -->
+      <view class='position'>
+        <image src='../../images/chargedetail_img/position.png'></image>
+        <text>{{item.InstallAddress}}</text>
+      </view>
+      <!-- 设备信息 -->
+      <view class='deviceinfor'>
+        功率：<text>{{item.Power}}</text>
+        充电路数：<text>{{item.DeviceWay}}路</text>
+        <image src='../../images/chargedetail_img/signal5.png'></image>
+      </view>
+      <!-- 充电开始时间 -->
+      <view class='starttime'>
+        <image src='../../images/chargedetail_img/chargetime.png'></image>
+        <text>充电开始时间</text>
+        <text>{{m_getDay.getDay(item.CreateTime)}}</text>
+        <text>{{m_getTime.getTime(item.CreateTime)}}</text>
+      </view>
+      <!-- 充电剩余时间 -->
+      <view class='remaintime'>
+        <image src='../../images/chargedetail_img/remaintime.png'></image>
+        <text>充电剩余时间</text>
+        <text>{{item.LeftTime}}</text>
+      </view>
+      <!-- 消费金额 -->
+      <view class='chargemoney'>
+        <image src='../../images/chargedetail_img/money.png'></image>
+        <text>消费金额：</text>
+        <text>{{item.DeviceMony}}元</text>
+      </view>
+    </view>
+    <!-- 右边的按钮 -->
+    <view class='station_button'>
+      <button size='mini' type='warn' bindtap='backMoney' data-index="{{index}}">退款</button>
+      <button size='mini' type='primary' bindtap='continueCharge' data-index="{{index}}">续充</button>
+    </view>
+  </view>
+</view>
+<!-- 没有充电设备的提示 -->
+<view class='nochargingdevice' hidden='{{flagNoCharging}}'>您目前没有设备在充电</view>
+<!-- 续充弹窗 -->
+<view class='remoteBox' hidden='{{flagRemote}}'>
+  <view class='remote'>
+    <view class='remote_top'>
+      <text>续充</text>
+      <image bindtap='closeRemoteBox' src='../../images/common_img/btn_close.png'></image>
+    </view>
+    <view class='remote_center'>
+      <input type='digit' placeholder='请输入续充金额' placeholder-style='font-size:30rpx;' maxlength='4' bindfocus='inputFocus' bindinput='inputMoney' value='{{inputInitValue}}' />
+    </view>
+    <view class='remote_bottom'>
+      <view bindtap='remoteConfirm'>确定</view>
+    </view>
+  </view>
+</view>
+
+<!-- 引入支付方式模板 -->
+<import src="../../template/paytype.wxml"/>
+<!-- <block wx:for="{{lists}}" wx:key="item.$id"> -->
+  <template is='payType' data='{{flagPayType,chargingMoney}}'></template>
+  <!-- data是要传入的这个页面需要的值 -->
+<!-- </block> -->
+
+
+<!-- wxs -->
+<!-- wxs处理数据获取日期 -->
+<wxs module="m_getDay">
+    var getDay=function(val){
+    return val.split('T')[0]
+  }
+  module.exports.getDay = getDay;
+</wxs>
+<!-- wxs处理数据获取时分秒 -->
+<wxs module="m_getTime">
+    var getTime=function(val){
+    return val.split('T')[1]
+  }
+  module.exports.getTime = getTime;
+</wxs>
+
+

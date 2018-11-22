@@ -1,0 +1,64 @@
+<!-- header -->
+<view class='header'>
+  <view>
+    <text>设备编码：</text>
+    <text>{{deviceNumber}}</text>
+  </view>
+  <!-- <view>
+    <text>云付充</text>
+  </view> -->
+</view>
+<!-- 充电路数选择 -->
+<view class='selectWay' hidden='{{flagSelectWay}}'>
+  <view class='lineheader'>
+    <view></view>
+    <text>请选择充电路数</text>
+    <view></view>
+  </view>
+  <view class='way_btn'><!--判断路数<=12不显示，>=12需要显示,再选择-->
+    <view class='{{flagWay=="1"?"waySelected":""}}' bindtap='wayBtn' data-selectport='1'>1-10路<icon type='success_no_circle' color='#fff' wx:if='{{flagWay=="1"}}'></icon></view>
+    <view class='{{flagWay=="2"?"waySelected":""}}' bindtap='wayBtn' data-selectport='2'>10-20路<icon type='success_no_circle' color='#fff' wx:if='{{flagWay=="2"}}'></icon></view>
+  </view>
+</view>
+<!-- 余额积分 -->
+<view class='yourinfor'>
+  <view>
+    <text>余额：{{balance}}元，</text>
+    <text>积分：{{jifen}}</text>
+  </view>
+  <view bindtap='toMine'>
+    我的记录
+  </view>
+</view>
+<!-- money -->
+<view class='money' hidden='{{flagMoneyBox}}'>
+  <view class='money_header'>
+    <view></view>
+    <text>请选择或输入消费金额</text>
+    <view></view>
+  </view>
+  <view class='money_btn'>
+    <view class='{{flagMoney=="1"?"moneySelected":""}}' data-money='1' bindtap='moneyBtn'>1元</view>
+    <view class='{{flagMoney=="2"?"moneySelected":""}}' data-money='2' bindtap='moneyBtn'>2元</view>
+    <view class='{{flagMoney=="3"?"moneySelected":""}}' data-money='3' bindtap='moneyBtn'>3元</view>
+    <view class='{{flagMoney=="5"?"moneySelected":""}}' data-money='5' bindtap='moneyBtn'>5元</view>
+  </view>
+</view>
+
+<view class='payCharge' bindtap='payCharge'>支付充电</view> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

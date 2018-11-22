@@ -1,0 +1,38 @@
+<view class='cardinfor'>
+  <view>
+    <image src='../../images/rechargecard_img/cardnumber.png'></image>
+    <text>卡号：</text>
+    <input type='text' placeholder='请输入卡编号' placeholder-style='font-size:30rpx;' maxlength='12' bindinput='inputCardNumber' value='{{cardNumberValue}}' />
+  </view>
+  <view>
+    <image src='../../images/rechargecard_img/balance.png'></image>
+    <text>余额：</text>
+    <input type='text' disabled='true' value='{{balanceValue}}'  />
+  </view>
+</view>
+<!-- 充值按钮 -->
+<view class="main_recharge">
+  <text>请选择充值金额</text>
+  <view class="money_wrap">
+    <view class='{{flagMoney=="5"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="5" bindtap='moneyBtn'>
+      <view>5元<icon type='success_no_circle' color='#fff' hidden='{{flagMoney!="5"}}'></icon></view>
+    </view>
+    <view class='{{flagMoney=="10"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="10" bindtap='moneyBtn'>
+      <view>10元<icon type='success_no_circle' color='#fff' hidden='{{flagMoney!="10"}}'></icon></view>
+    </view>
+    <view class='{{flagMoney=="30"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="30" bindtap='moneyBtn'>
+      <view>30元<icon type='success_no_circle' color='#fff' hidden='{{flagMoney!="30"}}'></icon></view>
+    </view>
+    <view class='{{flagMoney=="50"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="50" bindtap='moneyBtn'>
+      <view>50元<icon type='success_no_circle' color='#fff' hidden='{{flagMoney!="50"}}'></icon></view>
+    </view>
+    <view class='{{flagMoney=="100"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="100" bindtap='moneyBtn'>
+      <view>100元<icon type='success_no_circle' color='#fff' hidden='{{flagMoney!="100"}}'></icon></view>
+    </view>
+    <view class="moneyBtn">
+      <input type='digit' placeholder='或自定义金额' placeholder-style='font-size:30rpx;' maxlength='4' bindinput='inputMoney' value='{{inputInitValue}}' />
+    </view>
+  </view>
+</view>
+<!-- 立即充值按钮 -->
+<view class='btn_recharge' bindtap='nowRecharge'>立即充值</view>

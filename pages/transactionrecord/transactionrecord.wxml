@@ -1,0 +1,39 @@
+<view class='main'>
+  <view class='content' wx:for="{{lists}}" wx:key="item.$id">
+    <view class='content_left'>
+      <image src='{{item.TransactionType==2?"../../images/transaction_img/pay.png":"../../images/transaction_img/recharge.png"}}'></image>
+      <view>
+        <text>{{m_getWeek.getWeek(item.CreateTime)}}</text>
+        <text>{{m_getDay.getDay(item.CreateTime)}}</text>
+      </view>
+    </view>
+    <view class='content_right'>
+      <text class='{{item.TransactionType==2? "pay":"recharge"}}'>{{item.TransactionType==2?-item.Money+"元":item.Money+"元"}}</text>
+      <text wx:if='{{item.TransactionType==2}}'>{{item.Ways==1?"微信支付":(item.Ways==2?"支付宝支付":(item.Ways==3?"余额支付":"其他"))}}</text>
+      <text wx:elif='{{item.TransactionType==1}}'>充值</text>
+    </view>
+  </view>
+</view>
+<!-- 空空如也 -->
+<view class='noData' style='width:100%;' hidden='{{flagNoData}}'>
+  <image style='width:100%;' src='../../images/common_img/kongkong.png'></image>
+</view>
+
+<!-- wxs -->
+<!-- wxs处理数据获取日期 -->
+<wxs module="m_getDay">
+    var getDay=function(val){
+    return val.split('T')[0]
+  }
+  module.exports.getDay = getDay;
+</wxs>
+<!-- wxs处理数据获取星期几 -->
+<wxs module="m_getWeek">
+    var getWeek=function(val){
+      var _week=getDate(val.split('T')[0]).getDay();
+      //console.log(_week);
+      var _weekArr=["星期日","星期一","星期二","星期三","星期四","星期五","星期六",]
+      return _weekArr[_week];
+  }
+  module.exports.getWeek = getWeek;
+</wxs>

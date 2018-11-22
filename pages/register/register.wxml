@@ -1,0 +1,19 @@
+<view class='header'>
+  请绑定手机
+</view>
+<view class='wrap'>
+  <view class='register'>
+  <view>
+    <image src='../../images/register_img/mobile.png'></image>
+    <text>手机号：</text>
+    <input type='digit' placeholder='请输入手机号码' placeholder-style='font-size:30rpx;color:#ccc;' maxlength='11' bindinput='inputMobile' disabled='{{flagInputMobile}}'/>
+    <view class='{{getVerifyClicked==false? "getVerifyDisabled":""}}' bindtap='getVerify'>{{getVerifyText}}</view>
+  </view>
+  <view>
+    <image src='../../images/register_img/verify.png'></image>
+    <text>验证码：</text>
+    <input type='digit' placeholder='请输入短信验证码' placeholder-style='font-size:30rpx;color:#ccc;' maxlength='6' bindinput='inputMessage'  />
+  </view>
+</view>
+</view>
+<button type='primary' bindtap='confirmBind'>确定绑定</button>

@@ -1,0 +1,11 @@
+<view class='header'>
+  <image src='../../images/scaninput_img/header.png'></image>
+</view>
+<view class='chargingMethod'>
+  <view class='scanCharging' bindtap='scanCharing'>扫码充电</view>
+  <view class='inputCharging'>
+    <input type='digit' placeholder='请输入设备编码' placeholder-style='font-size:30rpx;' maxlength='8' bindinput='inputDeviceNumber'/>
+    <view bindtap='inputCharging'>输码充电</view>
+  </view>
+</view>
+

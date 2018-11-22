@@ -1,0 +1,30 @@
+<view class="main_recharge">
+  <text>请选择充值金额</text>
+  <view class="money_wrap">
+    <view class='{{flagMoney=="5"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="5" bindtap='moneyBtn'>
+      <view>5元<icon type='success_no_circle' color='#fff' wx:if='{{flagMoney=="5"}}'></icon></view>
+      <text>送20积分</text>
+    </view>
+    <view class='{{flagMoney=="30"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="30" bindtap='moneyBtn'>
+      <view>30元<icon type='success_no_circle' color='#fff' wx:if='{{flagMoney=="30"}}'></icon></view>
+      <text>送200积分</text>
+    </view>
+    <view class='{{flagMoney=="50"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="50" bindtap='moneyBtn'>
+      <view>50元<icon type='success_no_circle' color='#fff' wx:if='{{flagMoney=="50"}}'></icon></view>
+      <text>送500积分</text>
+    </view>
+    <view class='{{flagMoney=="100"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="100" bindtap='moneyBtn'>
+      <view>100元<icon type='success_no_circle' color='#fff' wx:if='{{flagMoney=="100"}}'></icon></view>
+      <text>送1200积分</text>
+    </view>
+    <view class='{{flagMoney=="200"?"moneyBtnSelected moneyBtn":"moneyBtn"}}' data-money="200" bindtap='moneyBtn'>
+      <view>200元<icon type='success_no_circle' color='#fff' wx:if='{{flagMoney=="200"}}'></icon></view>
+      <text>送2600积分</text>
+    </view>
+    <view class="moneyBtn">
+      <input type='digit' placeholder='或自定义金额' placeholder-style='font-size:30rpx;' maxlength='4' bindinput='inputMoney' value='{{inputInitValue}}' />
+    </view>
+  </view>
+</view>
+<view class='btn_recharge' bindtap='nowRecharge'>立即充值</view>
+<view class='btn_goCharging' hidden='{{flagBtnCharging}}' bindtap='goCharging'>前去充电</view>

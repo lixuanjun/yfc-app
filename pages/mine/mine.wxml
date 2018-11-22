@@ -1,0 +1,149 @@
+<!-- header -->
+<view class='header_wrap'>
+  <view class='header'>
+    <view class='photo'>
+      <image src='../../images/mine_img/photo.png'></image>
+    </view>
+    <view class='infor'>
+      <text>手机号码：<text>{{mobile}}</text></text>
+      <view>
+        <text>余额：<text>{{balance}}</text>元</text>
+        <text>积分：<text>{{jifen}}</text></text>
+      </view>
+    </view>
+  </view>
+  <view class='menu'>
+    <!-- <view class='inputcode'>
+      <image src='../../images/mine_img/nearstation.png'></image>
+      <text>附近电站</text>
+    </view> -->
+    <view class='inputcode' bindtap='toScanInput'>
+      <image src='../../images/mine_img/inputcode.png'></image>
+      <text>输码充电</text>
+    </view>
+    <view bindtap='toRecharge'>
+      <image src='../../images/mine_img/recharge.png'></image>
+      <text>我要充值</text>
+    </view>
+    <view bindtap='toRechargeCard'>
+      <image src='../../images/mine_img/electriccard.png'></image>
+      <text>电卡充值</text>
+    </view>
+  </view>
+</view>
+<!-- gray -->
+<view class='gray'></view>
+<!-- lists -->
+<view class='lists'>
+  <!-- <view class='cardactive'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/cardactive.png'></image>
+      <text>电卡激活</text>
+    </view>
+    <view class='lists_right'>
+      <text>激活</text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+  <!-- <view class='public'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/public.png'></image>
+      <text>公众号充电</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+  <view class='charging' bindtap='toChargeDetail'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/charging.png'></image>
+      <text>正在充电</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view>
+  <view class='transaction' bindtap='toTransactionRecord'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/transaction.png'></image>
+      <text>交易记录</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view>
+  <view class='chargerecord' bindtap='toChargeRecord'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/chargingtran.png'></image>
+      <text>充电记录</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view>
+  <!-- <view class='op'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/op.png'></image>
+      <text>运营系统</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+  <!-- <view class='collect'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/collect.png'></image>
+      <text>我的收藏</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+  <!-- <view class='agency'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/agency.png'></image>
+      <text>代理加盟</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+  <!-- <view class='aboutus'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/aboutus.png'></image>
+      <text>关于我们</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+  <!-- <view class='break'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/break.png'></image>
+      <text>常见故障</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+  <!-- <view class='idea'>
+    <view class='lists_left'>
+      <image src='../../images/mine_img/idea.png'></image>
+      <text>意见反馈</text>
+    </view>
+    <view class='lists_right'>
+      <text></text>
+      <image src='../../images/mine_img/go.png'></image>
+    </view>
+  </view> -->
+</view>
+<!-- <button open-type="getUserInfo" bindgetuserinfo="getUserInfo">微信授权</button> -->

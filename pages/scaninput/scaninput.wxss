@@ -1,0 +1,9 @@
+page{background: #f0f0f0;}
+view.header{width: 100%;height: 422rpx;}
+view.header>image{width: 100%;height: 422rpx;}
+view.chargingMethod{width: 100%;height: 260rpx;margin-top:100rpx; }
+view.chargingMethod>view{width: 680rpx;height: 100rpx;font-size:40rpx;text-align: center;line-height: 100rpx;margin: 0 auto;border-radius: 50rpx;}
+view.chargingMethod>view:nth-child(1){background: #78a8ed;color:#fff;}
+view.chargingMethod>view:nth-child(2){background: #fff;margin-top:40rpx;display: flex;overflow: hidden;}
+view.chargingMethod>view:nth-child(2)>input{width:70%;height: 100%;background:transparent ;text-align: center;}
+view.chargingMethod>view:nth-child(2)>view{width: 30%;height: 100%;background:#f46246;text-align: center;color:#fff;}

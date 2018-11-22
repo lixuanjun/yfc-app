@@ -1,0 +1,51 @@
+<!-- header -->
+<view class='header'>
+  <view>
+    <text>设备编码：</text>
+    <text>{{deviceNumber}}</text>
+  </view>
+  <!-- <view>
+    <text>云付充</text>
+  </view> -->
+</view>
+<!-- content -->
+<view class='content_wrap'>
+  <view class='content'>
+    <view class='{{item.State=="1"?"device deviceUsing":(clickedIndex==index? "device deviceClicked":"device")}}' data-index='{{index}}' data-state='{{item.State}}' bindtap='deviceSelect' wx:for="{{device}}" wx:key="item.way">
+      <view class='deviceWay'>{{item.DeviceWayId}}</view>
+      <view class='deviceState'>{{item.State==1?"使用中":"空闲"}}</view>
+    </view>
+  </view>
+</view>
+<!-- 余额积分 -->
+<view class='yourinfor'>
+  <view>
+    <text>余额：{{balance}}元，</text>
+    <text>积分：{{jifen}}</text>
+  </view>
+  <view bindtap='toMine'>
+    我的记录
+  </view>
+</view>
+<!-- money -->
+<view class='money'>
+  <view class='money_header'>
+    <view></view>
+    <text>请选择或输入消费金额</text>
+    <view></view>
+  </view>
+  <view class='money_btn'>
+    <view class='{{money=="1"?"moneySelected":"moneyNormal"}} {{is_inputed?"isMoneyNormal":""}}' data-money='1' bindtap='moneyBtn'>1元</view>
+    <view class='{{money=="2"?"moneySelected":"moneyNormal"}} {{is_inputed?"isMoneyNormal":""}}' data-money='2' bindtap='moneyBtn'>2元</view>
+    <view class='{{money=="3"?"moneySelected":"moneyNormal"}} {{is_inputed?"isMoneyNormal":""}}' data-money='3' bindtap='moneyBtn'>3元</view>
+    <view class='{{money=="4"?"moneySelected":"moneyNormal"}} {{is_inputed?"isMoneyNormal":""}}' data-money='4' bindtap='moneyBtn'>4元</view>
+  </view>
+  <view class='input_shouldmonet'>
+    <input type='digit' placeholder='或输入消费金额' placeholder-style='font-size:30rpx;' maxlength='4' bindfocus='inputFocus' bindinput='inputMoney' value='{{inputInitValue}}' />
+  </view>
+  <view class='charging_tip'>
+    <text>充电时长：</text>
+    <text>自动检测按功率输出充电时间</text>
+  </view>
+</view>
+ <view class='payCharge' bindtap='payCharge'>支付充电</view> 

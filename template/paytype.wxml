@@ -1,0 +1,30 @@
+<template name='payType'>
+  <view class='payTypeBox' hidden='{{flagPayType}}'>
+    <view class='payType'>
+      <view class='payType_top'>
+        <text>选择支付方式</text>
+        <image bindtap='closePayBox' src='../../images/common_img/btn_close.png'></image>
+      </view>
+      <view class='payType_center'>
+        <text>￥{{chargingMoney}}</text>
+      </view>
+      <view class='payType_bottom'>
+        <view bindtap='WXPay'>
+          <image src='../../images/common_img/wx.png'></image>
+          <view>
+            <text>微信支付</text>
+            <text>推荐已安装微信客户端的用户使用</text>
+          </view>
+        </view>
+        <view bindtap='YEPay'>
+          <image src='../../images/common_img/yue.png'></image>
+          <view>
+            <text>余额支付</text>
+            <text>推荐您使用余额进行支付</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+</template>
+

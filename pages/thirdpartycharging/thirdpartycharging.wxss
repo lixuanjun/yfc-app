@@ -1,0 +1,48 @@
+page{background: #f0f0f0;border-top:1rpx solid transparent;}
+/*header*/
+view.header{width: 100%;height:70rpx;display: flex;flex-direction: row;justify-content: space-between; align-items: center;border-bottom:1px solid #ccc;box-sizing: border-box;}
+view.header text{font-size:30rpx;}
+/* 路数选择 */
+view.selectWay{width: 690rpx;height: 240rpx;border-radius: 20rpx;background: #eaece9;margin: 30rpx auto 0;overflow: hidden;}
+view.lineheader{height: 100rpx;/*background: orange;*/font-size:30rpx;color:#a9a9a9;display: flex;justify-content: space-between;align-items: center;}
+view.lineheader>view{width: 20%;height: 1rpx;background: #a9a9a9;}
+view.way_btn{height: 100rpx;/*background: pink;*/display: flex;justify-content: space-around;}
+view.way_btn>view{width: 40%;height: 100rpx;background: #78a8ed;border-radius: 20rpx;font-size:32rpx;color:#fff;text-align: center;line-height: 100rpx;}
+view.way_btn>view.waySelected{background: #f46246;}
+/* 余额积分 */
+view.yourinfor{width: 700rpx;height:84rpx;background: #fff;margin: 20rpx auto 0;display: flex;justify-content: space-between;align-items: center;font-size:26rpx;color:#484848;border-radius: 10rpx;}
+view.yourinfor>view:nth-child(1)>text:nth-child(1){margin-left: 30rpx;}
+view.yourinfor>view:nth-child(2){width: 160rpx;height: 60rpx;background: #78a8ed;border-radius: 10rpx;font-size: 28rpx;color:#fff;text-align: center;line-height: 60rpx;margin-right: 30rpx;}
+
+/* money选择 */
+view.money{width: 700rpx;height: 230rpx;border-radius: 20rpx;background: #fff;margin: 20rpx auto 0;font-size:30rpx;color:#a9a9a9;overflow: hidden;}
+view.money_header{width:100%;height: 60rpx;/*background: orange;*/display: flex;justify-content: space-between;align-items: center;margin-top: 10rpx;}
+view.money_header>view{width: 20%;height: 1px;background: #a9a9a9;}
+view.money_btn{width: 100%;height: 120rpx;/*background: pink;*/display: flex;justify-content: space-around;align-items: center;font-size:30rpx;color:#fff;}
+/* 固定钱数样式改变 */
+view.money_btn>view{width: 120rpx;height: 60rpx;background:#78a8ed;border-radius: 8rpx; text-align: center;line-height: 60rpx;}
+view.money_btn>view.moneySelected{width: 120rpx;height: 60rpx;background: #f46246;border-radius: 8rpx; text-align: center;line-height: 60rpx;}
+/*isMoneyNormal 输入框的选定，恢复固定金钱按钮的样式 */
+view.money_btn>view.isMoneyNormal{background:#78a8ed;}
+
+/*下面支付充电按钮*/
+view.payCharge{width: 700rpx;height: 70rpx;background:#f46246;margin: 50rpx auto 0;border-radius:35rpx;font-size:40rpx;color:#fff;text-align: center;line-height: 70rpx;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

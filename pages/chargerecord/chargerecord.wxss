@@ -1,0 +1,37 @@
+view.wrap{width: 100%;height:100%;/*background: pink;*/}
+view.station{width: 690rpx;height: 220rpx;padding:30rpx 0 10rpx 0;/*background: orange;*/margin: 0 auto;display: flex;border-bottom: 1rpx solid #ddd;}
+/* 左边 */
+view.infor{width: 520rpx;/*background: green;*/}
+view.place{font-size: 30rpx;color:#434343;margin-bottom: 10rpx;}
+view.position{display: flex;align-items: center;font-size: 24rpx;color:#959595;}
+view.position>image{width: 20rpx;height: 30rpx;margin-right: 10rpx;}
+view.deviceinfor{font-size:24rpx;color:#686868;margin-bottom: 10rpx;}
+view.deviceinfor>text:nth-child(1){margin-right: 40rpx;}
+view.deviceinfor>text:nth-child(2){margin-right: 20rpx;}
+view.deviceinfor>image{width: 32rpx;height: 28rpx;}
+view.chargetime{font-size: 26rpx;color:#686868;margin-bottom: 10rpx;}
+view.chargetime>image{width:30rpx;height:30rpx ;}
+view.chargetime>text:nth-child(2){margin:0 10rpx 0 20rpx;}
+/* 右边 */
+view.money{width: 170rpx;/*background: yellow;*/border-left:1rpx solid #ddd;box-sizing: border-box;font-size:28rpx;}
+view.money>view:nth-child(1){color:#686868;display: flex;justify-content: center;align-items: center;}
+view.money>view:nth-child(1)>image{width: 30rpx;height: 30rpx;}
+view.money>view:nth-child(2){color:orange;font-weight: bold;text-align: center;margin-bottom: 20rpx;}
+view.money>view:nth-child(3){color:#686868;display: flex;justify-content: center;align-items: center;}
+view.money>view:nth-child(3)>image{width: 30rpx;height: 30rpx;}
+view.money>view:nth-child(4){color:#1297db;font-weight: bold;text-align: center;}
+
+/* 下拉刷新 */
+view.refresh{width: 100%;height:60rpx;background: #ddd;font-size:30rpx;text-align: center;color:#666;line-height: 60rpx;}
+/* 上拉加载 */
+scroll-view.scrollContainer{background: yellow;}
+
+
+
+
+
+
+
+
+
+

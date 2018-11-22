@@ -1,0 +1,31 @@
+<view class='map'>
+  <map id='myMap' show-location='true' longitude="{{yourLongitude}}" latitude="{{yourLatitude}}" scale="18" circles='{{mapCircle}}' markers='{{markerLists}}' bindregionchange='regionChange' >
+  <!-- 地图中心点 -->
+  <cover-view class='mapCenter'>
+    <cover-image src='../../images/index_img/center.png'></cover-image>
+  </cover-view>
+
+  <cover-view class='scanCharge' bindtap='scanCharge'>
+    <cover-image style='width:80rpx;height:80rpx;margin:30rpx 0 10rpx 0;' src='../../images/index_img/scan.png'></cover-image>
+    <cover-view>扫码充电</cover-view>
+  </cover-view>
+  <cover-view class='inputCharge' bindtap='inputCharge'>
+    <cover-image src='../../images/index_img/inputcode.png'></cover-image>
+  </cover-view>
+  <cover-view class='customerService' bindtap='customerService'>
+    <cover-image src='../../images/index_img/customerService.png'></cover-image>
+  </cover-view>
+  <cover-view class='mine' bindtap='toMine'>
+    <cover-image src='../../images/index_img/mine.png'></cover-image>
+  </cover-view>
+  <cover-view class='yourPosition' bindtap='getYourLocation'>
+    <cover-image src='../../images/index_img/position.png'></cover-image>
+  </cover-view>
+  <cover-view class='yourCharging' bindtap='toChargeDetail'>
+    <cover-image src='../../images/index_img/yourCharging.png'></cover-image>
+  </cover-view>
+
+
+  </map>
+  
+</view>

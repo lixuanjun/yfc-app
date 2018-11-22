@@ -1,0 +1,62 @@
+
+
+<view class='wrap'>
+    <view class='station' wx:for="{{lists}}" wx:key="item.$id">
+      <!-- 左边详情 -->
+      <view class='infor'>
+        <view class='place'>{{item.Name}}</view>
+        <view class='position'>
+          <image src='../../images/chargedetail_img/position.png'></image>
+          <text>{{item.InstallAddress}}</text>
+        </view>
+        <view class='deviceinfor'>
+          设备编号：<text>{{item.DeviceNumber}}</text>
+          充电路数：<text>{{item.DeviceWay}}</text>
+          <image src='../../images/chargedetail_img/signal3.png'></image>
+        </view>
+        <view class='chargetime'>
+          <image src='../../images/chargedetail_img/chargetime.png'></image>
+          充电开始时间
+          <text>{{m_getDay.getDay(item.CreateTime)}}</text>
+          <text>{{m_getTime.getTime(item.CreateTime)}}</text>
+        </view>
+        
+        
+      </view>
+      <!-- 右边钱数 -->
+      <view class='money'>
+        <view>
+          <image src='../../images/chargedetail_img/money.png'></image>
+          <text>消费金额</text>
+        </view>
+        <view>{{item.Money}}元</view>
+        <view>
+          <image src='../../images/chargedetail_img/jifen.png'></image>
+          <text>积分抵扣</text>
+        </view>
+        <view>{{item.Coupon}}元</view>
+      </view>
+    </view>
+
+</view>
+
+<!-- 空空如也 -->
+<view class='noData' style='width:100%;' hidden='{{flagNoData}}'>
+  <image style='width:100%;' src='../../images/common_img/kongkong.png'></image>
+</view>
+
+<!-- wxs -->
+<!-- wxs处理数据获取日期 -->
+<wxs module="m_getDay">
+    var getDay=function(val){
+    return val.split('T')[0]
+  }
+  module.exports.getDay = getDay;
+</wxs>
+<!-- wxs处理数据获取时分秒 -->
+<wxs module="m_getTime">
+    var getTime=function(val){
+    return val.split('T')[1]
+  }
+  module.exports.getTime = getTime;
+</wxs>

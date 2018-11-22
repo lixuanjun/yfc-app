@@ -1,0 +1,5 @@
+<view class='header_userinfo'>
+ <image src='../../images/userinfo_img/header.png'></image>
+</view>
+
+<button class='getWX' open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">微信绑定</button> 

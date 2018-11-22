@@ -1,0 +1,41 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/chargerecord/chargerecord",
+    
+    
+    "pages/mine/mine",
+    
+    
+    "pages/transactionrecord/transactionrecord",
+    
+    "pages/rechargecard/rechargecard",
+    "pages/recharge/recharge",
+    
+    "pages/thirdpartycharging/thirdpartycharging",
+    "pages/singlewaycharging/singlewaycharging",
+    "pages/charging/charging",
+    
+    "pages/register/register",
+    
+    "pages/chargedetail/chargedetail",
+    "pages/allcharging/allcharging",
+    
+   
+    
+    
+    "pages/userinfo/userinfo",
+    
+
+    "pages/scaninput/scaninput"
+    
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "云付充欢迎您",
+    "navigationBarTextStyle": "white",
+    "navigationStyle": "default"  
+  }
+  
+}

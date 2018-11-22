@@ -1,0 +1,84 @@
+page{background: #f0eff5;}
+/* banner动画 */
+view.animation{width: 100%;height: 550rpx;/*background: orange;*/position: relative;}
+view.animation>image.bg{width: 100%;height: 550rpx;position: absolute;top:0;z-index: 1;}
+/* 电池动画效果缓存,加载前先缓存一下,防止动画效果卡顿 */
+view.battery_cache0{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery0.png');display: none;}
+view.battery_cache1{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery1.png');display: none;}
+view.battery_cache2{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery2.png');display: none;}
+view.battery_cache3{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery3.png');display: none;}
+view.battery_cache4{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery4.png');display: none;}
+/* 电池充电动画效果 */
+view.battery_box{width: 100rpx;height: 272rpx;background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery0.png');background-size: cover;position: absolute;left:60rpx;top:190rpx;z-index: 2;animation:battery 6s linear infinite running;}
+@keyframes battery{
+  0%{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery0.png');}
+  20%{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery1.png');}
+  40%{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery2.png');}
+  60%{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery3.png');}
+  100%{background-image: url('http://m.yunchong168.com/images/chargedetail_img/battery4.png');}
+}
+/* 大白云动画效果 */
+view.animation>image.cloud_big{width: 160rpx;height: 40rpx;position: absolute;z-index: 3;animation: bigcloud 9s linear infinite running;}
+@keyframes bigcloud{
+  0%{right:-160rpx;top:80rpx;}
+  100%{right:100%;top:80rpx;}
+}
+/* 小白云动画效果 */
+view.animation>image.cloud_small{width: 130rpx;height: 30rpx;position: absolute;z-index: 3;animation: smallcloud 5s linear infinite running;}
+@keyframes smallcloud{
+  0%{right:-130rpx;top:40rpx;}
+  100%{right:100%;top:40rpx;}
+}
+/* 太阳动画效果 */
+view.animation>image.sun{width: 100rpx;height: 100rpx;position: absolute;left:140rpx;top:20rpx;z-index: 2;animation: sun 7s linear infinite running;}
+@keyframes sun{
+  0%{left:0;top:160rpx;}
+  50%{left:40%;top:0;}
+  100%{left:100%;top:80rpx;}
+}
+/* 充电中 */
+view.main_detail{width: 100%;margin-top: 30rpx;}
+view.station{width:630rpx;height: 260rpx;padding: 0 30rpx 0 30rpx;margin: 0 auto 30rpx;background:#fff;display: flex;border-radius: 20rpx;}
+/* 左边的信息 */
+view.infor{width: 520rpx;/*background: orange;*/display: flex;flex-direction: column;}
+  /* 地方 */
+view.place{font-size:30rpx;color:#434343;margin-bottom: 10rpx;display: flex;}
+view.place>view.place_deviceNumber{font-size: 26rpx;color:#686868;line-height: 42rpx;margin-left: 20rpx;}
+  /* 位置 */
+view.position{font-size: 24rpx;color:#959595;display: flex;align-items: center;margin-bottom: 10rpx;}
+view.position>image{width: 20rpx;height: 30rpx;margin-right: 10rpx;}
+  /* 设备信息 */
+view.deviceinfor{font-size:24rpx;color:#686868;margin-bottom: 10rpx;}
+view.deviceinfor>image{width: 32rpx;height: 28rpx;}
+view.deviceinfor>text{margin-right: 30rpx;}
+  /* 充电开始时间 */
+view.starttime{display: flex;align-items: center;font-size:26rpx;color:#686868;margin-bottom: 10rpx;}
+view.starttime>image{width: 20rpx;height: 20rpx;}
+view.starttime>text{margin-left: 10rpx;}
+  /* 充电剩余时间 */
+view.remaintime{display: flex;align-items: center;font-size:26rpx;color:#686868;margin-bottom: 10rpx;}
+view.remaintime>image{width: 20rpx;height: 20rpx;}
+view.remaintime>text{margin-left: 10rpx;}
+  /* 消费金额 */
+view.chargemoney{display: flex;align-items: center;font-size:30rpx;font-weight: bold;margin-bottom: 10rpx;}
+view.chargemoney>image{width: 20rpx;height: 20rpx;}
+view.chargemoney>text:nth-child(2){margin-left: 10rpx;color:#686868;}
+view.chargemoney>text:nth-child(3){margin-left: 10rpx;color:orange;}
+/* 右边的按钮 */
+view.station_button{width: 170rpx;/*background: yellow;*/border-left: 1rpx solid #bfbfbf;box-sizing: border-box;display: flex;flex-direction: column;justify-content: space-around;}
+
+/* 续充弹窗 */
+view.remoteBox{width:100%;height:100%;position: fixed;left:0;right:0;top:0;bottom:0;z-index: 1000;background: rgba(0, 0, 0, 0.3);font-size:36rpx;color:#fff;}
+view.remote{width: 600rpx;height: 400rpx;background: #fff;margin: 260rpx auto 0;border-radius: 20rpx;overflow: hidden;}
+view.remote_top{height: 90rpx;background:#78a8ed;display: flex;justify-content: space-between;align-items: center;}
+view.remote_top>text{margin-left: 30rpx;}
+view.remote_top>image{width:46rpx;height: 46rpx;margin-right: 30rpx;}
+view.remote_center{height: 210rpx;/*background: orange;*/display: flex;justify-content: center;align-items: center;}
+view.remote_center>input{width: 400rpx;height: 80rpx;border:1rpx solid #ddd;text-align: center;color:#f46246;}
+view.remote_bottom{height: 100rpx;/*background: yellow;*/}
+view.remote_bottom>view{width: 250rpx;height: 80rpx;margin: 0 auto;background: #78a8ed;border-radius: 10rpx;text-align: center;line-height: 80rpx;}
+
+/* 没有设备充电的提示 */
+view.nochargingdevice{height: 100rpx;/*background: pink;*/text-align: center;font-size: 36rpx; color:#aaa;margin-top: 100rpx;}
+/* 引入支付方式模板样式 */
+@import "../../template/paytype.wxss";

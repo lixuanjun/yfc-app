@@ -1,0 +1,36 @@
+/**index.wxss**/
+page{position: relative;}
+
+/*下面是自己添加的*/
+/* page{display: flex;flex-direction: column;} */
+view.header{width: 100%;height: 100rpx;background: pink;display: flex;justify-content:space-between;align-items:center;}
+view.header text {margin-left: 30rpx;}
+view.header navigator{margin-right: 30rpx;}
+/*地图  */
+/*地图全屏height:100vh  */
+view.map{width: 100%;height:100vh;/*background: orange;*/}
+map#myMap{width: 100%;height:100%;}
+/*扫码充电按钮  */
+cover-view.scanCharge{width: 200rpx;height: 200rpx;background:#78a8ed;border-radius: 50%;font-size:30rpx;color:#fff;display: flex;flex-direction: column;align-items: center;position:fixed;bottom:50rpx;left:50%;margin-left: -100rpx;}
+/* 下面的样式不知道为啥无效， */
+/* cover-view.scanCharge>cover-image{width: 50rpx;height: 50rpx;} 
+cover-view.scanCharge>cover-view{font-size:30rpx;color:#fff;}*/
+/* 输码充电按钮 */
+cover-view.inputCharge{width:100rpx ;height:100rpx ;background: #fff;border-radius: 50%;display: flex;justify-content: center;align-items: center;position: fixed;bottom:250rpx;right:50rpx;}
+cover-view.inputCharge cover-image{width: 50rpx;height: 50rpx; }
+
+cover-view.customerService{width: 100rpx;height: 100rpx;background:#fff;border-radius: 50%;display: flex;justify-content: center;align-items: center;position: fixed;bottom:450rpx;right:50rpx;}
+cover-view.customerService cover-image{width: 50rpx;height: 50rpx; }
+
+cover-view.mine{width: 100rpx;height: 100rpx;background:#fff;border-radius: 50%;display: flex;justify-content: center;align-items: center;position: fixed;bottom:50rpx;right:50rpx;}
+cover-view.mine cover-image{width: 50rpx;height: 50rpx; }
+
+cover-view.yourPosition{width: 100rpx;height: 100rpx;background:#fff;border-radius: 50%;display: flex;justify-content: center;align-items: center;position: fixed;bottom:50rpx;left:50rpx;}
+cover-view.yourPosition cover-image{width: 50rpx;height: 50rpx; }
+
+cover-view.yourCharging{width: 100rpx;height: 100rpx;background:#fff;border-radius: 50%;display: flex;justify-content: center;align-items: center;position: fixed;bottom:250rpx;left:50rpx;}
+cover-view.yourCharging cover-image{width: 50rpx;height: 50rpx; }
+
+/* 地图中心图标 */
+cover-view.mapCenter{width: 100rpx;height: 100rpx;background: transparent;border-radius: 50%;display: flex;justify-content: center;align-items: center;position:fixed;left: 50%;top:50%; margin-left: -50rpx;margin-top: -50rpx;}
+cover-view.mapCenter cover-image{width: 64rpx;height: 64rpx;}

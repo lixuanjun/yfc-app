@@ -1,0 +1,9 @@
+view.main{width: 690rpx;/*background: pink;*/margin: 0 auto;}
+view.content{width: 690rpx;height: 140rpx;/*background: orange;*/border-bottom:1px solid #eee;box-sizing: border-box;display: flex;}
+view.content_left{width: 50%;display: flex;align-items: center;font-size: 32rpx;color:#999;}
+view.content_left>image{width: 54rpx;height: 54rpx;margin-right: 30rpx;}
+view.content_left>view{display: flex;flex-direction: column;}
+view.content_right{width: 50%;display: flex;flex-direction: column;justify-content: center;align-items: flex-end;font-size: 32rpx;color:#666;}
+view.content_right>text.pay{color:#f46246;}
+view.content_right>text.recharge{color:#78a8ed;}
+

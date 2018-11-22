@@ -1,0 +1,14 @@
+page{background: #f0f0f3;}
+view.header{width: 690rpx;height: 60rpx;margin:0 auto;font-size:26rpx;color:#9e9e9f;line-height: 60rpx;}
+view.wrap{width:100%;background: #fff;}
+view.register{width: 690rpx;height: 350rpx;margin: 0 auto;overflow: hidden;}
+view.register>view{height: 100rpx;display: flex;align-items: center;font-size:30rpx;border-bottom:1rpx solid #ccc;box-sizing: border-box; }
+/* view.register>view>text{} */
+view.register>view:nth-child(1){margin:30rpx 0;}
+view.register>view>input{width: 300rpx;font-size:36rpx;color:#78a8ed;}
+view.register>view:nth-child(2)>input{width: 300rpx;font-size:36rpx;color:#f46246;}
+view.register>view:nth-child(1)>view{width: 160rpx;height: 64rpx;background:#78a8ed;border-radius: 10rpx;font-size:26rpx;color:#fff;text-align: center;line-height: 64rpx;}
+view.register>view:nth-child(1)>view.getVerifyDisabled{background: #ccc;}
+view.register>view>image{width: 56rpx;height: 56rpx;margin-right: 20rpx;}
+
+button{margin-top: 70rpx;}
